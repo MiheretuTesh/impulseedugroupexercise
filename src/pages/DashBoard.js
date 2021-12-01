@@ -37,23 +37,23 @@ function DashBoard() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <Link class="nav-link" href="#"></Link>
+                  <Link class="nav-link" to=""></Link>
                 </li>
               </ul>
               <div class="form-inline my-2 my-lg-0 pr-5">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <Link class="nav-link" href="#">
+                    <Link class="nav-link" to="">
                       <i class="fas fa-search"></i>
                     </Link>
                   </li>
                   <li class="nav-item active">
-                    <Link class="nav-link" href="#">
+                    <Link class="nav-link" to="">
                       <i class="fas fa-th"></i>
                     </Link>
                   </li>
                   <li class="nav-item active">
-                    <Link class="nav-link" href="#">
+                    <Link class="nav-link" to="">
                       <span className="bell p-1 px-2">
                         <i class="fas fa-bell pr-1"></i>
                         15
@@ -70,7 +70,7 @@ function DashBoard() {
                         width: "45px",
                         height: "45px",
                       }}
-                      href="#"
+                     
                     >
                       <i class="far fa-user"></i>
                     </Link>
@@ -80,7 +80,7 @@ function DashBoard() {
                       to="/"
                       class="nav-link"
                       style={{ fontWeight: "700" }}
-                      href="#"
+                     
                     >
                       Groww90
                     </Link>
@@ -157,7 +157,7 @@ function DashBoard() {
                         Current Balance: <i class="fas fa-rupee-sign"></i> 2.2L
                       </div>
                       <div className="card- p-1 pt-3 h5 pl-4 pr-4">
-                        <Link href="">View Settlement</Link>
+                        <Link to="">View Settlement</Link>
                       </div>
                     </div>
                   </div>
