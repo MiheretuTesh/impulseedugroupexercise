@@ -116,12 +116,12 @@ function Register() {
         </div>
         <div className="row">
           <div className="col-md-4 left-login">
-            <div className="col text-center pt-5 px-5">
+            <div className="col text-center pt-5 px-2">
               <h1>Create an Account</h1>
             </div>
             <form>
               <div className="row">
-                <div className="col-md-10 offset-1 px-5 py-4 pt-5">
+                <div className="col-md-10 offset-1 px-5 py-2 pt-5">
                   <TextField
                     fullWidth
                     id="standard-password-input"
@@ -132,7 +132,7 @@ function Register() {
                     InputLabelProps={{ style: { fontSize: 20 } }}
                   />
                 </div>
-                <div className="col-md-10 offset-1 px-5 py-4 pt-1">
+                <div className="col-md-10 offset-1 px-5 py-2 pt-1">
                   <TextField
                     fullWidth
                     id="standard-password-input"
@@ -143,7 +143,7 @@ function Register() {
                     InputLabelProps={{ style: { fontSize: 20 } }}
                   />
                 </div>
-                <div className="col-md-10 offset-1 px-5 py-4 pt-1">
+                <div className="col-md-10 offset-1 px-5 py-2 pt-1">
                   <TextField
                     fullWidth
                     id="standard-password-input"
@@ -154,7 +154,7 @@ function Register() {
                     InputLabelProps={{ style: { fontSize: 20 } }}
                   />
                 </div>
-                <div className="col-md-10 offset-1 px-5 py-4 pt-1">
+                <div className="col-md-10 offset-1 px-5 py-2 pt-1">
                   <TextField
                     fullWidth
                     id="standard-password-input"
