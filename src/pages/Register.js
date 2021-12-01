@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
-import { Grid, TextField, Button } from "@mui/material";
+import {
+  Grid,
+  TextField,
+  Button,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+} from "@mui/material";
+// import IconButton from '@mui/material/IconButton';
+// import Input from '@mui/material/Input';
+import FilledInput from "@mui/material/FilledInput";
+import OutlinedInput from "@mui/material/OutlinedInput";
+// import InputLabel from '@mui/material/InputLabel';
+// import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from "@mui/material/FormHelperText";
+// import FormControl from '@mui/material/FormControl';
+// import TextField from '@mui/material/TextField';
+// import Visibility from '@mui/icons-material/Visibility';
+// import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import ImageContainer from "../components/ImageContainer";
 import "./Login.css";
 
@@ -21,8 +39,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    backgroundColor: "#E5E5E5",
+    backgroundColor: "#E5E5E5 !important",
     height: "100vh",
+    zIndex: "1000"
   },
   loginPage: {
     display: "flex",
@@ -47,8 +66,29 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
 }));
+function Register() {
+  const [values, setValues] = useState({
+    amount: "",
+    password: "",
+    weight: "",
+    weightRange: "",
+    showPassword: false,
+  });
 
-function Login() {
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   const classes = useStyles();
   return (
     <div className={classes.containerLogin}>
@@ -65,9 +105,9 @@ function Login() {
             </Grid>
             <Grid item xs={6} md={8}>
               <div className={classes.topBtnTxt}>
-                <p className="paraSongs">New to subspace? </p>
-                <Button variant="contained" className="px-3 py-2 ml-3">
-                  Sign Up
+                <p className="paraSongs">Already has an account</p>
+                <Button variant="contained" className="px-3 py-2 ml-3 ">
+                  Login
                 </Button>
               </div>
             </Grid>
@@ -76,36 +116,75 @@ function Login() {
         <div className="row">
           <div className="col-md-4 left-login">
             <div className="col text-center p-5">
-              <h1>Log in to Dashboard</h1>
+              <h1>Create an Account</h1>
             </div>
             <form>
               <div className="row">
-                <div className="col-md-8 offset-2 px-5 py-5 pb-1">
+                <div className="col-md-10 offset-1 px-5 py-4 pt-5">
                   <TextField
                     fullWidth
                     id="standard-password-input"
-                    label="Your Email"
+                    label="Enter Mobile"
                     type="email"
                     autoComplete="current-password"
                     variant="standard"
                     InputLabelProps={{ style: { fontSize: 20 } }}
                   />
                 </div>
-                <div className="col-md-8 offset-2 px-5 py-4 pt-1">
+                <div className="col-md-10 offset-1 px-5 py-4 pt-1">
                   <TextField
                     fullWidth
                     id="standard-password-input"
-                    label="Password"
+                    label="Enter Email"
                     type="password"
                     autoComplete="current-password"
                     variant="standard"
                     InputLabelProps={{ style: { fontSize: 20 } }}
                   />
                 </div>
-                <div className="col text-center p-5">
+                <div className="col-md-10 offset-1 px-5 py-4 pt-1">
+                  <TextField
+                    fullWidth
+                    id="standard-password-input"
+                    label="Enter Password"
+                    type="password"
+                    autoComplete="current-password"
+                    variant="standard"
+                    InputLabelProps={{ style: { fontSize: 20 } }}
+                  />
+                </div>
+                <div className="col-md-10 offset-1 px-5 py-4 pt-1">
+                  <TextField
+                    fullWidth
+                    id="standard-password-input"
+                    label="Confirm Password"
+                    type="confirmpassword"
+                    autoComplete="current-password"
+                    variant="standard"
+                    InputLabelProps={{ style: { fontSize: 20 } }}
+                  />
+                </div>
+                <div className="col-md-8 offset-2 px-0 py-4 pt-1">
+                  <FormGroup className="text-left">
+                    <FormControlLabel
+                      control={<Checkbox defaultChecked />}
+                      label="I hearby confirm that I am above 18 years old."
+                    />
+                  </FormGroup>
+                </div>
+                <div className="col-md-6 offset-0 pl-5 ml-3">
                   <Button variant="contained" className="px-5 py-3">
-                    Login
+                    Verify OTP
                   </Button>
+                </div>
+                <div className="col-md-10 offset-1 p pl-5 pt-2 text-left">
+                  <p>
+                    <span className="text-muted">
+                      {" "}
+                      By creating this account, you agreed to our privacy policy
+                    </span>{" "}
+                    <b>Contact Us</b>
+                  </p>
                 </div>
               </div>
             </form>
@@ -212,4 +291,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
