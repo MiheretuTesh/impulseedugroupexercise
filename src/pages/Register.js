@@ -116,7 +116,7 @@ function Register() {
         </div>
         <div className="row">
           <div className="col-md-4 left-login">
-            <div className="col text-center p-5">
+            <div className="col text-center pt-5 px-5">
               <h1>Create an Account</h1>
             </div>
             <form>
@@ -175,7 +175,7 @@ function Register() {
                 </div>
                 <div className="col-md-6 offset-0 pl-5 ml-3">
                   <Link to="/dashboard">
-                    <Button variant="contained" className="px-5 py-3">
+                    <Button variant="contained" className="px-5 py-0">
                       Verify OTP
                     </Button>
                   </Link>
