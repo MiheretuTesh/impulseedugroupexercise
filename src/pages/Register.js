@@ -21,6 +21,7 @@ import FormHelperText from "@mui/material/FormHelperText";
 // import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import ImageContainer from "../components/ImageContainer";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     backgroundColor: "#E5E5E5 !important",
     height: "100vh",
-    zIndex: "1000"
+    zIndex: "1000",
   },
   loginPage: {
     display: "flex",
@@ -173,9 +174,11 @@ function Register() {
                   </FormGroup>
                 </div>
                 <div className="col-md-6 offset-0 pl-5 ml-3">
-                  <Button variant="contained" className="px-5 py-3">
-                    Verify OTP
-                  </Button>
+                  <Link to="/dashboard">
+                    <Button variant="contained" className="px-5 py-3">
+                      Verify OTP
+                    </Button>
+                  </Link>
                 </div>
                 <div className="col-md-10 offset-1 p pl-5 pt-2 text-left">
                   <p>

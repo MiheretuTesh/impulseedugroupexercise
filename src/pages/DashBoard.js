@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import SideMenu from "../components/SideMenu";
 import "./Dashboard.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({}));
 
@@ -36,31 +37,32 @@ function DashBoard() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#"></a>
+                  <Link class="nav-link" href="#"></Link>
                 </li>
               </ul>
               <div class="form-inline my-2 my-lg-0 pr-5">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" href="#">
                       <i class="fas fa-search"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" href="#">
                       <i class="fas fa-th"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <Link class="nav-link" href="#">
                       <span className="bell p-1 px-2">
                         <i class="fas fa-bell pr-1"></i>
                         15
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item active pl-5">
-                    <a
+                    <Link
+                      to=""
                       class="nav-link"
                       style={{
                         border: "2px solid #2B83EA",
@@ -71,12 +73,17 @@ function DashBoard() {
                       href="#"
                     >
                       <i class="far fa-user"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" style={{ fontWeight: "700" }} href="#">
+                    <Link
+                      to="/"
+                      class="nav-link"
+                      style={{ fontWeight: "700" }}
+                      href="#"
+                    >
                       Groww90
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -150,7 +157,7 @@ function DashBoard() {
                         Current Balance: <i class="fas fa-rupee-sign"></i> 2.2L
                       </div>
                       <div className="card- p-1 pt-3 h5 pl-4 pr-4">
-                        <a href="">View Settlement</a>
+                        <Link href="">View Settlement</Link>
                       </div>
                     </div>
                   </div>
@@ -159,7 +166,9 @@ function DashBoard() {
                   <div className="col-md-4">
                     <div className="d-card-me card-me p-3 pt-4 pb-5 pl-4">
                       <h2 className="pb-2">Payment Value</h2>
-                      <h3><i class="fas fa-rupee-sign"></i>6.72L</h3>
+                      <h3>
+                        <i class="fas fa-rupee-sign"></i>6.72L
+                      </h3>
                     </div>
                   </div>
                   <div className="col-md-4">

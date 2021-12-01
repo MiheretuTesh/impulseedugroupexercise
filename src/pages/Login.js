@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 import { Grid, TextField, Button } from "@mui/material";
 import ImageContainer from "../components/ImageContainer";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -66,9 +67,11 @@ function Login() {
             <Grid item xs={6} md={8}>
               <div className={classes.topBtnTxt}>
                 <p className="paraSongs">New to subspace? </p>
-                <Button variant="contained" className="px-3 py-2 ml-3">
-                  Sign Up
-                </Button>
+                <Link to="/register">
+                  <Button variant="contained" className="px-3 py-2 ml-3">
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             </Grid>
           </Grid>
@@ -103,9 +106,11 @@ function Login() {
                   />
                 </div>
                 <div className="col text-center p-5">
-                  <Button variant="contained" className="px-5 py-3">
-                    Login
-                  </Button>
+                  <Link to="/dashboard">
+                    <Button variant="contained" className="px-5 py-3">
+                      Login
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </form>

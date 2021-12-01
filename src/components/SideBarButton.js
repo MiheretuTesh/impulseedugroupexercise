@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   side3: {},
 }));
-function SideBarButton({ color, title }) {
+function SideBarButton({ color, title, icon }) {
   const classes = useStyles();
   return (
     <div>
@@ -27,7 +27,7 @@ function SideBarButton({ color, title }) {
         <div className="col-md-8 side-2">
           <div className="row align-items-center">
             <div className="col-md-4">
-              <i className="fas fa-boxes" style={{ color: `${color}` }}></i>
+              <i className={`${icon}`} style={{ color: `${color}` }}></i>
             </div>
             <div className="col-md-8">
               <h4 className={classes.side3} style={{ color: `${color}` }}>
