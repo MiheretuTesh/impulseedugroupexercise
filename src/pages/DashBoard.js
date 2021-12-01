@@ -94,25 +94,84 @@ function DashBoard() {
                     Submit a few KYC details and start accepting payments from
                     your customers
                   </h4>
+
                   <div className="row">
                     <div className="col-md-4">
+                      <div className="circle">
+                        <i class="fas fa-check p-2"></i>
+                      </div>
                       <h2 className="">Contact Details</h2>
                     </div>
                     <div className="col-md-4">
+                      <div className="circle">
+                        <i class="fas fa-check p-2"></i>
+                      </div>
                       <h2 className="">Live Payments and Settlements</h2>
                       <p className="text-muted h5 pt-3">
-                        Submit a few KYC details to start accepting <br />payments and
-                        receive settlements in your <br />account
+                        Submit a few KYC details to start accepting <br />
+                        payments and receive settlements in your <br />
+                        account
                       </p>
-                      <button type="button" class="btn btn-primary px-3 py-3 mt-3">
+                      <button
+                        type="button"
+                        class="btn btn-primary px-3 py-3 mt-3"
+                      >
                         Submit KYC
                       </button>
                     </div>
                     <div className="col-md-4">
+                      <div className="circle">
+                        <i class="fas fa-check p-2"></i>
+                      </div>
                       <h2 className="">Account Activation</h2>
                       <p className="text-muted h5 pt-3">
-                        Get all KYC details approve to <br /> complete the account activation
+                        Get all KYC details approve to <br /> complete the
+                        account activation
                       </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="d-card-me p-3 mt-4">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex">
+                      <div className="card-2 p-1 pt-3">
+                        <p>
+                          <i class="fas fa-calendar-alt pr-2"></i>
+                          Post 30 Days
+                          <i class="fas fa-angle-down pl-2"></i>
+                        </p>
+                      </div>
+                      <div className="card-2 p-1 pt-3">
+                        <p>12 oct 2021 to 12 Nov 2021</p>
+                      </div>
+                    </div>
+                    <div className="d-flex">
+                      <div className="card-3 p-1 pt-3 h5 pr-4">
+                        Current Balance: <i class="fas fa-rupee-sign"></i> 2.2L
+                      </div>
+                      <div className="card- p-1 pt-3 h5 pl-4 pr-4">
+                        <a href="">View Settlement</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row mt-4">
+                  <div className="col-md-4">
+                    <div className="d-card-me card-me p-3 pt-4 pb-5 pl-4">
+                      <h2 className="pb-2">Payment Value</h2>
+                      <h3><i class="fas fa-rupee-sign"></i>6.72L</h3>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="d-card-me card-me p-3 pt-4 pb-5 pl-4">
+                      <h2 className="pb-2">Number of Payments</h2>
+                      <h3>2.12K</h3>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="d-card-me card-me p-3 pt-4 pb-5 pl-4">
+                      <h2 className="pb-2">Number of Refunds</h2>
+                      <h3>44</h3>
                     </div>
                   </div>
                 </div>

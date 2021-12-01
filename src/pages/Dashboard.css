@@ -16,6 +16,9 @@
   display: flex;
   justify-content: center;
 }
+body{
+  overflow: hidden
+}
 .d-card {
   width: 90%;
   display: flex;
@@ -30,16 +33,33 @@
 }
 .bell {
   color: #fff !important;
-  background-color: #2B83EA;
+  background-color: #2b83ea;
   border-radius: 10px;
 }
 .fa-use {
-  border: 10px solid #2B83EA;
+  border: 10px solid #2b83ea;
 }
 
-.d-card-me{
+.d-card-me {
   width: 100%;
   border-radius: 20px;
   background-color: #fff;
-  
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.fa-check {
+  background-color: rgb(21, 201, 57);
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+.card-2 {
+  border: 1px solid #333;
+}
+.card-3 {
+  border-right: 1px solid;
+}
+.card-me {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
