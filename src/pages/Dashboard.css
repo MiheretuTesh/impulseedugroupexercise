@@ -11,3 +11,12 @@
   .site-layout-background {
     background: #fff;
   }
+  .dashboard-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .d-card{
+    width: 80%;
+    height: 
+  }

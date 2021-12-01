@@ -1,61 +1,39 @@
-import { Layout, Menu } from "antd";
 import React from "react";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import "./Dashboard.css";
-const { Header, Content, Footer, Sider } = Layout;
+import { makeStyles } from "@material-ui/core";
+import SideMenu from "../components/SideMenu";
+
+const useStyles = makeStyles((theme) => ({}));
 
 function DashBoard() {
+  const classes = useStyles();
   return (
     <div>
-      <Layout>
-        <Sider
-          breakpoint="lg"
-          collapsedWidth="0"
-          onBreakpoint={(broken) => {
-            console.log(broken);
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log(collapsed, type);
-          }}
-        >
-          <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]}>
-            <Menu.Item key="1" icon={<UserOutlined />}>
-              nav 1
-            </Menu.Item>
-            <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-              nav 2
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UploadOutlined />}>
-              nav 3
-            </Menu.Item>
-            <Menu.Item key="4" icon={<UserOutlined />}>
-              nav 4
-            </Menu.Item>
-          </Menu>
-        </Sider>
-        <Layout>
-          <Header
-            className="site-layout-sub-header-background"
-            style={{ padding: 0 }}
-          />
-          <Content style={{ margin: "24px 16px 0" }}>
-            <div
-              className="site-layout-background"
-              style={{ padding: 24, minHeight: 360 }}
-            >
-              content
+      <div className="row">
+        <div className="col-md-3">
+          <SideMenu className="pt-5 mt-5" />
+        </div>
+        <div className="col-md-8">
+          <div className="col-md-12">
+            <div className="row align-items-center">
+              <div className="col-md-8">Navbar</div>
+              <div className="col-md-4">
+                <div className="row">
+                  <div className="col-md-4">A</div>
+                  <div className="col-md-4">A</div>
+                  <div className="col-md-4">A</div>
+                </div>
+              </div>
             </div>
-          </Content>
-          <Footer style={{ textAlign: "center" }}>
-            Ant Design ©2018 Created by Ant UED
-          </Footer>
-        </Layout>
-      </Layout>
+          </div>
+          <div className="col-md-12">
+            <div className="dashboard-card">
+              <div className="d-card">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
